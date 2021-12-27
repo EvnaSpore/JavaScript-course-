@@ -1,0 +1,24 @@
+function isIsogram(str){
+  //works
+if (str.isEmpty) {
+  return true;
+} else {  
+  str = str.toLowerCase();
+}
+var word = str.split('');
+var sorted = word.slice().sort();
+  
+for ( var i = 0; i < sorted.length; i++) {
+  if (sorted[i + 1] == sorted[i]){
+  return false;
+  }
+} 
+return true;        
+}
+//for some reason doesn't work - just changed == to != and true-false
+//if (sorted[i + 1] != sorted[i]){
+  //return true;
+  //}
+//} 
+//return false;        
+//}
